@@ -1,0 +1,211 @@
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.product-image {
+  background: #f9f9f9;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.main-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.main-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.nav-btn.prev {
+  left: 5px;
+}
+
+.nav-btn.next {
+  right: 5px;
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #db4a2b;
+  opacity: 1;
+}
+
+.product-info {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 12px;
+  flex-grow: 1;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #f5b301;
+}
+
+.star.half {
+  color: #f5b301;
+  opacity: 0.7;
+}
+
+.rating-value {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 12px 0;
+}
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  display: inline-block;
+  flex: 0 1 auto;
+}
+
+.btn-like {
+  background: #ff6b6b;
+  color: white;
+}
+
+.btn-like:hover {
+  background: #ff5252;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
+
+.btn-primary {
+  background: #db4a2b;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #c03d21;
+}
+
+.btn-share {
+  background: #25d366;
+  color: white;
+}
+
+.btn-share:last-of-type {
+  background: #0088cc;
+}
+
+.btn-share:hover {
+  filter: brightness(0.9);
+}

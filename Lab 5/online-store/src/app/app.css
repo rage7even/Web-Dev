@@ -1,0 +1,54 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #333;
+}
+
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.category-btn {
+  padding: 10px 24px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #333;
+}
+
+.category-btn:hover {
+  background: #e0e0e0;
+}
+
+.category-btn.active {
+  background: #db4a2b;
+  color: white;
+}
+
+.welcome {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.main-content {
+  min-height: 400px;
+}

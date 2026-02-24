@@ -1,0 +1,173 @@
+.product-container {
+  border: 1px solid #eaeaea;
+}
+
+.product-container:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.product-card {
+  border: 1px solid #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.product-image {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.main-image { 
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: 0.2s;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: 0.2s ease;
+}
+
+.product-info {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 12px;
+  flex-grow: 1;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #f5b301;
+}
+
+.star.half {
+  position: relative;
+  color: #f5b301;
+  opacity: 0.7; /* упрощённо */
+}
+
+.rating-value {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 12px 0;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 0 1 auto;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #db4a2b;
+  color: white;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #c03d21;
+}
+
+.btn-share {
+  background: #25d366; /* WhatsApp green */
+  color: white;
+  flex: 0 1 auto;
+}
+
+.btn-share:last-child {
+  background: #0088cc; /* Telegram blue */
+}
+
+.btn-share:hover {
+  filter: brightness(0.9);
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #db4a2b; /* оранжевая обводка активной миниатюры */
+  opacity: 1;
+}

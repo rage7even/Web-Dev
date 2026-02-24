@@ -1,0 +1,28 @@
+<div class="app-container">
+  <header class="header">
+    <h1>Online Store</h1>
+  </header>
+
+  <nav class="category-nav">
+    <button
+      *ngFor="let category of categories"
+      class="category-btn"
+      [class.active]="selectedCategoryId === category.id"
+      (click)="selectCategory(category.id)">
+      {{ category.name }}
+    </button>
+  </nav>
+
+  <main class="main-content">
+    <app-product-list
+      *ngIf="selectedCategoryId"
+      [products]="filteredProducts"
+      (like)="onLike($event)"
+      (delete)="onDelete($event)">
+    </app-product-list>
+
+    <div *ngIf="!selectedCategoryId" class="welcome">
+      <p>Выберите категорию, чтобы увидеть товары.</p>
+    </div>
+  </main>
+</div>
