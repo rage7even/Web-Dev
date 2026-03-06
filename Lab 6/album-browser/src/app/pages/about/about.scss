@@ -1,0 +1,6 @@
+.muted { color: rgba(255, 255, 255, 0.78); }
+
+.kv { margin-top: 16px; display: grid; gap: 10px; }
+.kv__row { display:flex; justify-content: space-between; gap: 12px; padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.05); }
+.kv__k { color: rgba(255,255,255,0.65); }
+.kv__v { font-weight: 600; }

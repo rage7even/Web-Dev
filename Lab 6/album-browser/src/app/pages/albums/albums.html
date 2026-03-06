@@ -1,0 +1,16 @@
+<h2>Albums</h2>
+
+<ng-container *ngIf="loading; else loaded">
+  <div>Loading albums... (loading={{loading}})</div>
+</ng-container>
+
+<ng-template #loaded>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="!error">
+    <div *ngFor="let album of albums" class="album">
+      <b>#{{ album.id }}</b> — {{ album.title }}
+    </div>
+  </div>
+</ng-template>
+  
