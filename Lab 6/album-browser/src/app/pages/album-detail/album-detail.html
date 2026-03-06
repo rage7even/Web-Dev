@@ -1,0 +1,26 @@
+<section class="card">
+  <div *ngIf="loading" class="loader">Loading album…</div>
+  <div *ngIf="!loading && error" class="error">{{ error }}</div>
+
+  <div *ngIf="!loading && album as a" class="detail">
+    <div class="head">
+      <div>
+        <h2>Album #{{ a.id }}</h2>
+        <p class="muted">User: {{ a.userId }}</p>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-ghost" (click)="back()">Back</button>
+        <button class="btn btn-primary" (click)="viewPhotos()">View Photos</button>
+      </div>
+    </div>
+
+    <div class="form">
+      <label class="label">Title</label>
+      <input class="input" [(ngModel)]="titleDraft" placeholder="Enter album title" />
+      <button class="btn btn-primary" (click)="save()" [disabled]="saving">
+        {{ saving ? 'Saving…' : 'Save' }}
+      </button>
+    </div>
+  </div>
+</section>

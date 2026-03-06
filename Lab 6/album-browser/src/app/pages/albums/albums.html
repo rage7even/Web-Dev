@@ -1,0 +1,20 @@
+<h2>Albums</h2>
+
+<ng-container *ngIf="loading; else loaded">
+  <div>Loading albums... (loading={{loading}})</div>
+</ng-container>
+
+<ng-template #loaded>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="!error" class="list">
+    <div *ngFor="let album of albums; trackBy: trackByAlbumId" class="item" (click)="openAlbum(album.id)">
+      <div class="item__main">
+        <div class="item__id">#{{ album.id }}</div>
+        <div class="item__title">{{ album.title }}</div>
+      </div>
+      <button class="btn btn-ghost" (click)="deleteAlbum(album.id, $event)">Delete</button>
+    </div>
+  </div>
+</ng-template>
+  
