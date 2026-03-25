@@ -1,0 +1,11 @@
+.idea/
+Defence/
+DjangoP/
+practice/
+prepare/
+random/
+
+**/__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
