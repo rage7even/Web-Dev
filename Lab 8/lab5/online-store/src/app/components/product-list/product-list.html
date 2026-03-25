@@ -1,0 +1,30 @@
+<section class="product-list">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Selected category</p>
+      <h2>{{ categoryName() }}</h2>
+    </div>
+
+    <p class="section-copy">
+      Cards below come from AppComponent through input(). Likes and deletions travel up from
+      ProductItemComponent through ProductListComponent using output().
+    </p>
+  </div>
+
+  @if (products().length) {
+    <div class="grid">
+      @for (product of products(); track product.id) {
+        <app-product-item
+          [product]="product"
+          (likeRequested)="requestLike($event)"
+          (deleteRequested)="requestDelete($event)"
+        />
+      }
+    </div>
+  } @else {
+    <div class="empty-products">
+      <strong>No products in this category.</strong>
+      <p>Everything here was deleted from the current view. Try another category.</p>
+    </div>
+  }
+</section>

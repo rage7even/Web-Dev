@@ -1,0 +1,46 @@
+<article class="product-item">
+  <div class="media">
+    <img [src]="activeImage()" [alt]="product().name" />
+
+    <div class="thumbs">
+      @for (image of product().images; track image; let index = $index) {
+        <button
+          type="button"
+          [class.active]="index === activeImageIndex()"
+          (click)="selectImage(index)"
+          [attr.aria-label]="'Show image ' + (index + 1) + ' for ' + product().name"
+        >
+          <img [src]="image" [alt]="product().name + ' thumbnail ' + (index + 1)" />
+        </button>
+      }
+    </div>
+  </div>
+
+  <div class="copy">
+    <div class="meta">
+      <span class="price">{{ product().price | currency:'KZT ':'symbol':'1.0-0' }}</span>
+      <span class="rating">
+        @for (star of starIndexes; track star) {
+          <span [class.filled]="star <= roundedRating()">★</span>
+        }
+        <strong>{{ product().rating }}</strong>
+      </span>
+    </div>
+
+    <div class="heading">
+      <h3>{{ product().name }}</h3>
+      <p>{{ product().description }}</p>
+    </div>
+
+    <div class="social">
+      <a [href]="product().link" target="_blank" rel="noreferrer">Kaspi</a>
+      <a [href]="whatsappShareLink" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a [href]="telegramShareLink" target="_blank" rel="noreferrer">Telegram</a>
+    </div>
+
+    <div class="footer">
+      <button type="button" class="like" (click)="likeProduct()">❤ {{ product().likes }}</button>
+      <button type="button" class="delete" (click)="deleteProduct()">Delete</button>
+    </div>
+  </div>
+</article>

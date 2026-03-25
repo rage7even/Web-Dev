@@ -1,0 +1,59 @@
+<div class="app-shell">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Lab 5 / Components & Interaction</p>
+      <h1>Category-first Angular store with likes, deletion and parent-child communication.</h1>
+      <p>
+        The app follows the required hierarchy AppComponent → ProductListComponent →
+        ProductItemComponent, while keeping the interface modern, calm and easy to scan.
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <span>4 categories</span>
+      <strong>20 products</strong>
+      <p>Choose a section to render its items. Likes update instantly, deletions persist while you browse.</p>
+    </div>
+  </section>
+
+  <section class="category-panel">
+    <div class="panel-head">
+      <div>
+        <p class="eyebrow">Browse categories</p>
+        <h2>Pick a product family</h2>
+      </div>
+      <p>Exactly 4 categories with 5 products each, using real Kaspi product URLs.</p>
+    </div>
+
+    <div class="category-grid">
+      @for (category of categories; track category.id) {
+        <button
+          type="button"
+          class="category-card"
+          [class.active]="category.id === selectedCategoryId()"
+          (click)="selectCategory(category.id)"
+        >
+          <span>{{ category.name }}</span>
+          <strong>{{ countProducts(category.id) }} items</strong>
+        </button>
+      }
+    </div>
+  </section>
+
+  @if (selectedCategory(); as category) {
+    <app-product-list
+      [products]="selectedProducts()"
+      [categoryName]="category.name"
+      (likeRequested)="handleLike($event)"
+      (deleteRequested)="handleDelete($event)"
+    />
+  } @else {
+    <section class="empty-state">
+      <p class="eyebrow">Welcome</p>
+      <h2>Select a category to load its products.</h2>
+      <p>
+        Start with smartphones, laptops, headphones or tablets. The product list will appear here
+        with interactive cards and share actions.
+      </p>
+    </section>
+  }
