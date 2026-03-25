@@ -1,0 +1,18 @@
+@if (isOpen()) {
+  <div class="modal-backdrop" (click)="onBackdropClick()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-btn">X</button>
+
+      <div class="modal-body">
+        <div class="modal-image">
+          <img [src]="product().image" [alt]="product().name">
+        </div>
+        <div class="modal-detalis">
+          <h2>{{ product().name }}</h2>
+          <p>{{ product().description }}</p>
+          <p>Price: {{ product().price }}T</p>
+        </div>
+      </div>
+    </div>
+  </div>
+}

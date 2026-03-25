@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <head>
+
+    </head>
+    <body>
+        <div id="result">Click to Play</div>
+        <div id="balance">Balance: 100</div>
+        <button id="playBtn">Play</button>
+
+        <script>
+            const gameCost = 10;
+            const  winChance = 0.1;
+            const winReward = 100;
+
+            let balance = 100;
+
+            document.getElementById("playBtn").onclick = function () {
+                if(balance < gameCost) {
+                    document.getElementById("result").textContent =
+                    "Not enough money";
+                    return;
+                }
+
+                balance -= gameCost;
+
+                const win = Math.random() < winChance;
+                const result = {
+                    outcome: win ? "ura win" : "u cooked lose",
+                    reward: win ? winReward : 0,
+                };
+
+                balance += result.reward;
+
+                document.getElementById("result").textContent = result.outcome;
+
+                document.getElementById("balance").textContent = "Balance:" + balance;
+            };
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="nav-brand">Posts Browser App</div>
+
+  <div class="nav-links">
+    <a
+      routerLink="/home"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </a>
+
+    <a
+      routerLink="/posts"
+      routerLinkActive="active-link"
+    >
+      Posts
+    </a>
+  </div>
+</nav>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

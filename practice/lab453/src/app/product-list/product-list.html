@@ -1,0 +1,16 @@
+<button (click)="quickView.emit(product())">
+  👁️ Quick View
+</button>
+
+@for (product of products(); track product.id) {
+  <app-product-item
+    [product]="product"
+    (quickView)="openQuickView($event)"> </app-product-item>
+}
+
+@if (selectedProduct()) {
+  <app-modal
+    [product]="selectedProduct()!"
+    [isOpen]="isModalOpen()"
+    (closeModal)="closeQuickView()"> </app-modal>
+}

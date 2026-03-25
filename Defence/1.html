@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CineWave</title>
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            background: #747878;
+            color: white;
+            padding: 0 20px 30px 20px;
+        }
+        #header h1 {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap:20px;
+            justify-content: space-around;
+        }
+        .navLink {
+            color: black;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .navLink:hover {
+            text-decoration: underline;
+        }
+
+        #hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #d1d1d1;
+            padding: 40px;
+            text-align: center;
+        }
+        #hero h1 {
+            padding: 40px;
+            margin-bottom: 15px;
+        }
+        #hero p {
+            padding: 40px;
+            opacity: 0.9;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap:15px
+        }
+
+        input {
+            width: 300px;
+            border-radius: 15px;
+            border: none;
+            height: 25px;
+            padding: 10px;
+        }
+        button {
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #7a7474;
+        }
+        #movies{
+            padding:60px 40px;
+        }
+        #movies h2 {
+            text-align: center;
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap:20px;
+
+        }
+        .movie-card {
+            border: 1px solid #676464;
+            border-radius: 10px;
+            flex-wrap: nowrap;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>CineWave</h1>
+        <nav>
+            <ul>
+                <li><a class="navLink" href="">Home</a></li>
+                <li><a class="navLink" href="">Movies</a></li>
+                <li><a class="navLink" href="">Pricing</a></li>
+                <li><a class="navLink" href="">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h2>Unlimited Movies, Anytime, Anywhere</h2>
+            <p>Unlimited Movies, Anytime, Anywhere it's about djf fdjdfj fdf fdfddfndj.</p>
+            <form>
+                <label></label>
+                <input type="email" placeholder="Enter your email address" required>
+                <label></label>
+                <input type="password" placeholder="Create a password" required>
+
+                <button>Get Started</button>
+            </form>
+        </section>
+
+        <section id="movies">
+            <h2>Featured Movies</h2>
+            <div class="movies-grid">
+                <div class="movie-card">
+                    <h3>The Matrix</h3>
+                    <img src="" alt="The Matrix" class="movie-img">
+                    <span class="genre">Genre</span>
+                </div>
+
+                <div class="movie-card">
+                    <h3>The Matrix</h3>
+                    <img src="" alt="The Matrix" class="movie-img">
+                    <span class="genre">Genre</span>
+                </div>
+
+                <div class="movie-card">
+                    <h3>The Matrix</h3>
+                    <img src="" alt="The Matrix" class="movie-img">
+                    <span class="genre">Genre</span>
+                </div>
+
+                <div class="movie-card">
+                    <h3>The Matrix</h3>
+                    <img src="" alt="The Matrix" class="movie-img">
+                    <span class="genre">Genre</span>
+                </div>
+
+                <div class="movie-card">
+                    <h3>The Matrix</h3>
+                    <img src="" alt="The Matrix" class="movie-img">
+                    <span class="genre">Genre</span>
+                </div>
+
+                <div class="movie-card">
+                    <h3>The Matrix</h3>
+                    <img src="" alt="The Matrix" class="movie-img">
+                    <span class="genre">Genre</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2>Choose Your Plan"</h2>
+
+            <div class="plan-card">
+                <h3>Basic</h3>
+                <ul>
+                    <li>1,500 ₸/month</li>
+                    <li>SD quality</li>
+                    <li>1 device</li>
+                    <li>limited movies</li>
+                </ul>
+
+                <button class="subc">Subscribe</button>
+            </div>
+            <div class="plan-card">
+                <h3>Standard</h3>
+                <ul>
+                    <li> 2,500 ₸/month</li>
+                    <li>HD quality</li>
+                    <li>2 device</li>
+                    <li>full movies</li>
+                </ul>
+
+                <button class="subc">Subscribe"</button>
+            </div>
+            <div class="plan-card">
+                <h3>Premium</h3>
+                <ul>
+                    <li> 4,000 ₸/month</li>
+                    <li>4K quality</li>
+                    <li>4 device</li>
+                    <li>full movies + downloads</li>
+                </ul>
+
+                <button class="subc">Subscribe"</button>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>© 2026 CineWave. All Rights Reserved. </p>
+        <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

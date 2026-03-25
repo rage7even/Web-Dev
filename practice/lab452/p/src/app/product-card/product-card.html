@@ -1,0 +1,22 @@
+<div class="card">
+
+  <h2>{{ product.name }}</h2>
+
+  <p>{{ product.price }} ₸</p>
+
+  <span
+    class="badge" [ngClass]="product.inStock ? 'in' : 'out'">
+    {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+  </span>
+
+  <p>❤ {{ product.likes }}</p>
+
+  <button class="like-btn" (click)="likeProduct()">
+    Like
+  </button>
+
+  <button class="delete-btn" (click)="deleteProduct()">
+    Delete
+  </button>
+
+</div>

@@ -1,0 +1,11 @@
+<header>
+  <h1>Online Store</h1>
+  <span class="cart-badge">Cart ({{ cartTotal() }} items)</span>
+</header>
+
+<main>
+  <app-product-list
+    [products]="products"
+    (addToCart)="onAddToCart($event)"
+  />
+</main>

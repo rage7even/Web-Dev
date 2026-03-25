@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+
+<div class="grid">
+
+  @for (p of products; track p.id) {
+    <app-root>
+      [p] = "product"
+      (delete)="deleteProduct($event)"
+      </app-root>
+  }
+</div>

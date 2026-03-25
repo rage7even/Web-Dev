@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="s3.css">
+</head>
+<body>
+<div class="card">
+    <header>
+        <h1>Character Counter</h1>
+    </header>
+    <main>
+        <label for="text-input">📝 Enter your text:</label>
+        <textarea id="text-input" rows="6" placeholder="Start typing..."></textarea>
+
+        <div class="stats">
+            <div class="count-group">
+                <span id="char-count">Characters: 0 / 200</span>
+                <span id="word-count">Words: 0</span>
+            </div>
+            <p id="limit-warning"></p>
+            <button id="clear-btn">Clear</button>
+        </div>
+    </main>
+</div>
+
+<script src="sc3.js"></script>
+</body>
+</html>

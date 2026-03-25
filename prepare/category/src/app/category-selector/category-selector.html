@@ -1,0 +1,13 @@
+<h2>Category selector</h2>
+<div class="categories">
+  @for (c of categories; track c) {
+    <button (click)="selectCategory(c)">
+      {{ c }}
+    </button>
+  }
+</div>
+
+@if (selectedCategory) {
+  <h3>{{selectedCategory}}</h3>
+  <app-product-list [products]="products"/>
+}
